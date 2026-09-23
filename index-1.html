@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>সেতু — একটা কথা</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:#080611;color:#fff}body{overflow:hidden}
+.scene{min-height:100vh;display:grid;place-items:center;padding:22px;position:relative;background:radial-gradient(circle at 15% 20%,#ff69b51f,transparent 30%),radial-gradient(circle at 85% 75%,#846aff26,transparent 34%),linear-gradient(145deg,#080611,#12091d,#07050e)}
+.scene:before,.scene:after{content:"";position:absolute;width:45vw;height:45vw;border-radius:50%;filter:blur(60px);opacity:.2;animation:orb 9s ease-in-out infinite alternate}.scene:before{background:#ff4fa9;left:-16vw;top:-14vw}.scene:after{background:#725cff;right:-16vw;bottom:-18vw;animation-delay:-4s}@keyframes orb{to{transform:translate(8vw,5vh) scale(1.25)}}
+.card{width:min(720px,94vw);min-height:min(620px,84vh);position:relative;z-index:3;border:1px solid #ffffff22;border-radius:30px;background:#120d1eaa;backdrop-filter:blur(20px);box-shadow:0 25px 90px #0009,inset 0 1px #ffffff18;padding:clamp(25px,6vw,55px);display:flex;flex-direction:column;justify-content:center;text-align:center;overflow:hidden}
+h1{font-size:clamp(2rem,8vw,4.5rem);margin:12px 0;line-height:1.08}h2{font-size:clamp(1.45rem,5vw,2.35rem);line-height:1.35}p{font-size:clamp(1rem,3.8vw,1.25rem);line-height:1.85;color:#d9d1e8;max-width:620px;margin:8px auto}.small{color:#d8cde5;letter-spacing:.12em}
+.highlight{background:linear-gradient(90deg,#ff8fca,#ffd98a,#a98bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+button,.messenger{border:0;border-radius:999px;padding:14px 24px;font-size:1rem;font-weight:800;color:#180b19;background:linear-gradient(110deg,#ffd4eb,#ff9fce,#d8c9ff);box-shadow:0 10px 35px #ff75be40;cursor:pointer;text-decoration:none;display:inline-flex;justify-content:center;transition:.25s}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}.hidden{display:none!important}.progress{position:absolute;left:24px;right:24px;bottom:15px;height:3px;background:#ffffff12}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff8fca,#a98bff);transition:.5s}
+.layer{position:fixed;inset:0;pointer-events:none;z-index:8;overflow:hidden}.flower,.word{position:absolute;top:-60px}.flower{font-size:clamp(20px,5vw,36px);animation:fall linear forwards;filter:drop-shadow(0 0 8px #ff9cdd99)}@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(520deg);opacity:.1}}
+.word{font-weight:900;font-size:clamp(16px,4vw,30px);color:#ffd7f0d1;text-shadow:0 0 18px #ff71c2a6;white-space:nowrap;animation:fallWord linear forwards}@keyframes fallWord{to{transform:translate3d(var(--drift),110vh,0) rotate(12deg);opacity:0}}
+.creator,.counter{position:fixed;bottom:10px;z-index:10;font-size:.72rem;color:#bcb3c8}.creator{right:12px}.counter{left:12px}.creator a{color:#f2d7ff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="scene"><div class="layer" id="layer"></div><main class="card">
+<div class="small">একটা ছোট্ট কথা</div>
+<section><h1 class="highlight">সেতু, শোনো…</h1><p>একটু সময় নিয়ে এই কথাগুলো পড়বে?</p><div class="actions"><button onclick="next()">🌸 শুরু করি</button></div></section>
+<section class="hidden"><h2>কিছু কথা ঠিকভাবে বলা দরকার</h2><p>আগের একটি ঘটনায় তোমার মন খারাপ হয়ে থাকলে তার জন্য আমি সত্যিই দুঃখিত। বিশেষ করে তোমার অতীতের একটি ছবি পাঠানোটা ঠিক হয়নি—এটার জন্য আন্তরিকভাবে ক্ষমা চাইছি।</p><div class="actions"><button onclick="next()">পরের কথা →</button></div></section>
+<section class="hidden"><h2>ক্ষমা ও দয়ার কথা 🌿</h2><p class="highlight">“যে ব্যক্তি মানুষের প্রতি দয়া করে না, তার প্রতি আল্লাহও দয়া করেন না।”</p><p>— সহিহ বুখারি, সহিহ মুসলিম</p><div class="actions"><button onclick="next()">আরেকটা কথা →</button></div></section>
+<section class="hidden"><h2>তোমার সিদ্ধান্তকে আমি সম্মান করব</h2><p>তুমি আমার কথাগুলো ভেবে দেখো। কথা বলতে চাইলে নিজের ইচ্ছায় জানিও। কোনো চাপ নেই—তোমার স্বস্তি ও সিদ্ধান্তই আগে।</p><div class="actions"><button onclick="next()">শেষ পাতায় →</button></div></section>
+<section class="hidden"><div class="small">একটা প্রশ্ন</div><h1 class="highlight">Do you love me?</h1><p>এর উত্তর এখানে না লিখে চাইলে সরাসরি Messenger-এ জানাতে পারো।</p><div class="actions"><a class="messenger" href="https://m.me/si.md.atikul.islam" target="_blank" rel="noopener">💬 উত্তরটি Messenger-এ জানান</a></div></section>
+<div class="progress"><i id="bar"></i></div></main></div>
+<div class="counter" id="counter"></div><div class="creator">Creator: <a href="https://www.facebook.com/si.md.atikul.islam" target="_blank" rel="noopener">Atikul Islam</a></div>
+<script>
+const sections=[...document.querySelectorAll("main section")],layer=document.getElementById("layer");let current=0;
+function show(n){sections.forEach((s,i)=>s.classList.toggle("hidden",i!==n));document.getElementById("bar").style.width=((n+1)/sections.length*100)+"%"}
+function next(){if(current<sections.length-1){current++;show(current);flowerRain(32);if(current===4)wordRain()}}
+function flowerRain(count){const f=["🌸","🌷","🌹","🌺","💮","🌼","✿"];for(let i=0;i<count;i++){let e=document.createElement("div");e.className="flower";e.textContent=f[Math.random()*f.length|0];e.style.left=Math.random()*100+"vw";e.style.setProperty("--drift",(Math.random()*34-17)+"vw");e.style.animationDuration=3.5+Math.random()*4+"s";e.style.animationDelay=Math.random()*1.4+"s";layer.appendChild(e);setTimeout(()=>e.remove(),9000)}}
+function wordRain(){for(let i=0;i<30;i++){let e=document.createElement("div");e.className="word";e.textContent="Do you love me?";e.style.left=Math.random()*100+"vw";e.style.setProperty("--drift",(Math.random()*30-15)+"vw");e.style.animationDuration=4+Math.random()*3+"s";e.style.animationDelay=Math.random()*1.5+"s";layer.appendChild(e);setTimeout(()=>e.remove(),8500)}}
+show(0);setTimeout(()=>flowerRain(18),350);try{let k="setu_premium_views",n=+localStorage.getItem(k)||0;n++;localStorage.setItem(k,n);document.getElementById("counter").textContent="এই ডিভাইসে ভিউ: "+n}catch(e){}
+</script>
+</body>
+</html>
